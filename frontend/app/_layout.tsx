@@ -1,14 +1,16 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
 
-import { Tabs } from 'expo-router';
+
+import { Stack } from 'expo-router';
+import { Link } from 'expo-router';
 
 export default function Layout() {
-  return <Tabs />;
+  return (
+    <Stack>
+      <Stack.Screen name="page1" options={{ title: 'Page 1' }} />
+      <Stack.Screen name="page2" options={{ title: 'Page 2' }} />
+      <Stack.Screen name="page3" options={{ title: 'Page 3' }} />
+    </Stack>
+  );
 }
-
 
 
